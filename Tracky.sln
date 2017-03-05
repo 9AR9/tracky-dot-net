@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracky", "Tracky\Tracky.csproj", "{15003619-E642-4960-A9A1-96B02A0F8A8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracky.Domain", "Tracky.Domain\Tracky.Domain.csproj", "{601C7EE3-D224-4965-AA07-86C2293B8724}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracky.Domain.Services", "Tracky.Domain.Services\Tracky.Domain.Services.csproj", "{7DE2DBA5-C867-48F5-9585-EDB27E652631}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracky.Tests.Unit", "Tracky.Tests.Unit\Tracky.Tests.Unit.csproj", "{6C52523F-8ADF-41E9-8A19-5AABF0F76FAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracky.Tests.Integration", "Tracky.Tests.Integration\Tracky.Tests.Integration.csproj", "{E1D646A6-371B-44FF-9276-E4A09395F7F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tracky.Domain.Repositories", "Tracky.Domain.Repositories\Tracky.Domain.Repositories.csproj", "{ACFE621F-C3BC-40E0-B018-0201ECBF55B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15003619-E642-4960-A9A1-96B02A0F8A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15003619-E642-4960-A9A1-96B02A0F8A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15003619-E642-4960-A9A1-96B02A0F8A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15003619-E642-4960-A9A1-96B02A0F8A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{601C7EE3-D224-4965-AA07-86C2293B8724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{601C7EE3-D224-4965-AA07-86C2293B8724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{601C7EE3-D224-4965-AA07-86C2293B8724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{601C7EE3-D224-4965-AA07-86C2293B8724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DE2DBA5-C867-48F5-9585-EDB27E652631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE2DBA5-C867-48F5-9585-EDB27E652631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE2DBA5-C867-48F5-9585-EDB27E652631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE2DBA5-C867-48F5-9585-EDB27E652631}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C52523F-8ADF-41E9-8A19-5AABF0F76FAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C52523F-8ADF-41E9-8A19-5AABF0F76FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C52523F-8ADF-41E9-8A19-5AABF0F76FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C52523F-8ADF-41E9-8A19-5AABF0F76FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D646A6-371B-44FF-9276-E4A09395F7F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D646A6-371B-44FF-9276-E4A09395F7F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D646A6-371B-44FF-9276-E4A09395F7F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D646A6-371B-44FF-9276-E4A09395F7F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACFE621F-C3BC-40E0-B018-0201ECBF55B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACFE621F-C3BC-40E0-B018-0201ECBF55B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACFE621F-C3BC-40E0-B018-0201ECBF55B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACFE621F-C3BC-40E0-B018-0201ECBF55B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
