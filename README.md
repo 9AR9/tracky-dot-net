@@ -1,17 +1,18 @@
 # Tracky .NET
-Tracky .NET is a solution showcasing side-by-side ASP.NET MVC and ASP.NET WebAPI, Entity Framework, NHibernate, Structure Map,
+Tracky .NET is a solution showcasing side-by-side ASP.NET MVC and ASP.NET WebAPI, Entity Framework, NHibernate, Structure Map, NUnit,
 and general architectural happiness. It is centered around a domain for recorded music data (Artists, Songs, Albums, Genres, Playlists,
 etc.).
 
 The project was started for two primary reasons.
-* To learn Entity Framework in an intimate way, using a code-first approach to build a domain from scratch, and scaffold controllers
-  with asynchronous controller actions
+* To learn Entity Framework in an intimate way, using a code-first approach to build a domain from scratch, scaffold controllers
+  with asynchronous controller actions, and provide unit and integration tests proving their behavior
 * To practice side-by-side implementation of two frameworks I have worked with a lot in recent years, but in separate capacities:
   ASP.NET MVC and ASP.NET Web API
   
 As I progressed through the project, it quickly expanded in scope, as my own personal preferences for solution architecture
 began to creep in. In its initial published form (March 2017), the solution is focused primarily laying a solid architectural
 foundation for these technologies (MVC and Web API), including comprehensive tests for both MVC and API controllers.
+
 These controllers were all created via scaffolding, using asynchronous actions, and Entity Framework. MVC controllers were
 created via Visual Studio's **MVC 5 Controller with views, using Entity Framework** option, while API controllers were created
 via the **Web API 2 Controller with actions, using Entity Framework** option. In both cases the option for using async
