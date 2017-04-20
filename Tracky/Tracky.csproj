@@ -73,6 +73,9 @@
       <HintPath>..\packages\NHibernate.4.1.1.4000\lib\net40\NHibernate.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.6.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\structuremap.3.0.0.108\lib\net40\StructureMap.dll</HintPath>
       <Private>True</Private>
@@ -169,13 +172,16 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="App_Start\StructuremapWebApi.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="NHibernateInteractionTests.cs" />
     <Compile Include="Controllers\Api\AlbumsController.cs" />
     <Compile Include="Controllers\Api\AlbumTracksController.cs" />
     <Compile Include="Controllers\Api\ArtistsController.cs" />
@@ -265,6 +271,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Tracky.Domain.Repositories\Tracky.Domain.Repositories.csproj">
+      <Project>{ACFE621F-C3BC-40E0-B018-0201ECBF55B3}</Project>
+      <Name>Tracky.Domain.Repositories</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tracky.Domain.Services\Tracky.Domain.Services.csproj">
       <Project>{7de2dba5-c867-48f5-9585-edb27e652631}</Project>
       <Name>Tracky.Domain.Services</Name>
@@ -273,6 +283,9 @@
       <Project>{601c7ee3-d224-4965-aa07-86c2293b8724}</Project>
       <Name>Tracky.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

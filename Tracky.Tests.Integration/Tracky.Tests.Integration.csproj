@@ -133,12 +133,19 @@
     <Compile Include="Controllers\Mvc\GenresControllerTests.cs" />
     <Compile Include="Controllers\Mvc\ArtistsControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\NH\AlbumRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Tracky.Domain.Repositories\Tracky.Domain.Repositories.csproj">
+      <Project>{ACFE621F-C3BC-40E0-B018-0201ECBF55B3}</Project>
+      <Name>Tracky.Domain.Repositories</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tracky.Domain.Services\Tracky.Domain.Services.csproj">
       <Project>{7de2dba5-c867-48f5-9585-edb27e652631}</Project>
       <Name>Tracky.Domain.Services</Name>
@@ -152,10 +159,7 @@
       <Name>Tracky</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tracky\Controllers\Api\" />
-    <Folder Include="Tracky\Controllers\Mvc\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

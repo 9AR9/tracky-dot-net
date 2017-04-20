@@ -57,7 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="IUnitOfWorkFactory.cs" />
+    <Compile Include="NH\AlbumRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWorkFactory.cs" />
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="UnitOfWorkImplementor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tracky.Domain.Services\Tracky.Domain.Services.csproj">
@@ -75,7 +81,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="EF\" />
-    <Folder Include="NH\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
