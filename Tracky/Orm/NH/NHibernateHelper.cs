@@ -2,7 +2,7 @@
 using NHibernate;
 using NHibernate.Cfg;
 
-namespace Tracky.Orm
+namespace Tracky.Orm.NH
 {
     public sealed class NHibernateHelper
     {

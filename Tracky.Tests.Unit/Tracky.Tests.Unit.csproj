@@ -75,6 +75,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -130,8 +131,9 @@
     <Compile Include="Controllers\Mvc\AlbumsControllerTests.cs" />
     <Compile Include="Controllers\Mvc\SongsControllerTests.cs" />
     <Compile Include="Controllers\Mvc\PlaylistsControllerTests.cs" />
-    <Compile Include="Domain\Repositories\UnitOfWorkFactoryTests.cs" />
-    <Compile Include="Domain\Repositories\UnitOfWorkTests.cs" />
+    <Compile Include="Orm\NH\GabrielSchenker\UnitOfWorkFactoryTests.cs" />
+    <Compile Include="Orm\NH\GabrielSchenker\UnitOfWorkImplementorTests.cs" />
+    <Compile Include="Orm\NH\GabrielSchenker\UnitOfWorkManagerTests.cs" />
     <Compile Include="TestDbAsyncQueryProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -160,7 +162,11 @@
   <ItemGroup>
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\Repositories\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using NHibernate;
 using NHibernate.Cfg;
 
-namespace Tracky.Domain.Repositories
+namespace Tracky.Orm.NH.GabrielSchenker
 {
     public class UnitOfWorkFactory : IUnitOfWorkFactory
     {
@@ -16,7 +12,16 @@ namespace Tracky.Domain.Repositories
         private static Configuration _configuration;
         private static ISessionFactory _sessionFactory;
 
-        public ISession CurrentSession { get; set; }
+        public ISession CurrentSession
+        {
+            get
+            {
+                if(_currentSession == null)
+                    throw new InvalidOperationException("You are not in a unit of work.");
+                return _currentSession;
+            }
+            set { _currentSession = value; }
+        }
         public Configuration Configuration
         {
             get
@@ -47,7 +52,7 @@ namespace Tracky.Domain.Repositories
             }
         }
 
-        public IUnitOfWork Create()
+        public IUnitOfWorkImplementor Create()
         {
             ISession session = CreateSession();
             session.FlushMode = FlushMode.Commit;
@@ -58,6 +63,12 @@ namespace Tracky.Domain.Repositories
         private ISession CreateSession()
         {
             return SessionFactory.OpenSession();
+        }
+
+        public void DisposeUnitOfWork(IUnitOfWorkImplementor adapter)
+        {
+            CurrentSession = null;
+            UnitOfWorkManager.DisposeUnitOfWork(adapter);
         }
     }
 }

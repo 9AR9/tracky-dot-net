@@ -160,7 +160,9 @@
       <DependentUpon>201703010512262_Initial.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <EmbeddedResource Include="Mappings\Artist.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Artist.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Content Include="Migrations\ReadMe.txt" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -215,7 +217,14 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\DataSeeder.cs" />
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Orm\NHibernateHelper.cs" />
+    <Compile Include="Orm\NH\NHibernateHelper.cs" />
+    <Compile Include="Orm\NH\GabrielSchenker\GenericTransaction.cs" />
+    <Compile Include="Orm\NH\GabrielSchenker\IGenericTransaction.cs" />
+    <Compile Include="Orm\NH\GabrielSchenker\IUnitOfWorkFactory.cs" />
+    <Compile Include="Orm\NH\GabrielSchenker\IUnitOfWorkImplementor.cs" />
+    <Compile Include="Orm\NH\GabrielSchenker\UnitOfWorkFactory.cs" />
+    <Compile Include="Orm\NH\GabrielSchenker\UnitOfWorkImplementor.cs" />
+    <Compile Include="Orm\NH\GabrielSchenker\UnitOfWorkManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SillyStarterStuff.cs" />
   </ItemGroup>
