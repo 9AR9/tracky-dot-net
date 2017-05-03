@@ -3,14 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Tracky.Domain.Entities.Music;
+using Tracky.Domain.Repositories.Orm.NH.Tracky;
 
 namespace Tracky.Domain.Repositories.NH
 {
-    class AlbumRepository
+    public class AlbumRepository : IAlbumRepository
     {
-        /* 
-         * This file will be used implement a repository that interacts
-         * with the database using NHibernate.
-        */
+        private readonly UnitOfWork _unitOfWork;
+
+        public AlbumRepository(UnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+
+        public Album Get(int id)
+        {
+            return _unitOfWork.Session.Get<Album>(id);
+        }
+
+        public void Save(Album album)
+        {
+            _unitOfWork.Session.SaveOrUpdate(album);
+        }
+
+        public void Delete(Album album)
+        {
+            _unitOfWork.Session.Delete(album);
+        }
+
+        public IList<Album> GetAll()
+        {
+            return _unitOfWork.Session.QueryOver<Album>().List();
+        }
     }
 }

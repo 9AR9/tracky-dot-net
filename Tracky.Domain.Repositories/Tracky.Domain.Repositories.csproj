@@ -38,6 +38,10 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
       <Private>True</Private>
@@ -49,6 +53,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,7 +62,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Orm\EF\DataContexts\ILibraryContext.cs" />
+    <Compile Include="Orm\EF\DataContexts\LibraryContext.cs" />
+    <Compile Include="NH\PlaylistTrackRepository.cs" />
+    <Compile Include="NH\PlaylistRepository.cs" />
+    <Compile Include="NH\IPlaylistRepository.cs" />
+    <Compile Include="NH\IPlaylistTrackRepository.cs" />
+    <Compile Include="NH\IAlbumTrackRepository.cs" />
+    <Compile Include="NH\AlbumTrackRepository.cs" />
+    <Compile Include="NH\IAlbumRepository.cs" />
     <Compile Include="NH\AlbumRepository.cs" />
+    <Compile Include="NH\SongRepository.cs" />
+    <Compile Include="NH\GenreRepository.cs" />
+    <Compile Include="NH\ArtistRepository.cs" />
+    <Compile Include="NH\ISongRepository.cs" />
+    <Compile Include="NH\IGenreRepository.cs" />
+    <Compile Include="NH\IArtistRepository.cs" />
+    <Compile Include="Orm\NH\FromNHSite\FromNHSite\NHibernateHelperThatYouShouldNotBeUsing.cs" />
+    <Compile Include="Orm\NH\Tracky\NHibernateHelper.cs" />
+    <Compile Include="Orm\NH\Tracky\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,9 +97,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EF\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

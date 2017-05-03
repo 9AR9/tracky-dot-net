@@ -3,8 +3,8 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using Tracky.Domain.EF.DataContexts;
-using Tracky.Domain.EF.Music;
+using Tracky.Domain.Entities.Music;
+using Tracky.Domain.Repositories.Orm.EF.DataContexts;
 
 namespace Tracky.Controllers.Mvc
 {

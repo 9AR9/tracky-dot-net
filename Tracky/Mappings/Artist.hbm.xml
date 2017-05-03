@@ -5,7 +5,7 @@
 
   <class name="Artist" table="Artists">
     <id name="Id">
-      <generator class="identity"/>
+      <generator class="identity"/> <!-- should this be class="native"? -->
     </id>
     <property name="Name"></property>
   </class>

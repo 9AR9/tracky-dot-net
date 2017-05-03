@@ -5,8 +5,8 @@ using System.Web.Http;
 using System.Web.Http.Results;
 using NUnit.Framework;
 using Tracky.Controllers.Api;
-using Tracky.Domain.EF.Books;
-using Tracky.Domain.EF.DataContexts;
+using Tracky.Domain.Entities.Books;
+using Tracky.Domain.Repositories.Orm.EF.DataContexts;
 using Tracky.Domain.Services.EF.Books;
 
 namespace Tracky.Tests.Integration.Controllers.Api
@@ -20,7 +20,7 @@ namespace Tracky.Tests.Integration.Controllers.Api
         [SetUp]
         public void SetUp()
         {
-            Database.SetInitializer(new DatabaseInitializer());             // Set initializer for a fresh in-memory database for each test run
+            Database.SetInitializer(new EFDatabaseInitializer());           // Set initializer for a fresh in-memory database for each test run
             var context = new LibraryContext();                             // Create data context
             context.Database.Initialize(true);                              // Initialize database on context
 

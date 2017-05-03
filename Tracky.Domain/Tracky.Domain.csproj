@@ -34,29 +34,46 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EF\Books\Author.cs" />
-    <Compile Include="EF\Books\Book.cs" />
-    <Compile Include="EF\Books\BookDetailDto.cs" />
-    <Compile Include="EF\Books\BookDto.cs" />
-    <Compile Include="EF\DataContexts\ILibraryContext.cs" />
-    <Compile Include="EF\DataContexts\LibraryContext.cs" />
-    <Compile Include="EF\Music\Album.cs" />
-    <Compile Include="EF\Music\AlbumTrack.cs" />
-    <Compile Include="EF\Music\Artist.cs" />
-    <Compile Include="EF\Music\Genre.cs" />
-    <Compile Include="EF\Music\Playlist.cs" />
-    <Compile Include="EF\Music\PlaylistTrack.cs" />
-    <Compile Include="EF\Music\Song.cs" />
+    <Compile Include="Entities\Books\Author.cs" />
+    <Compile Include="Entities\Books\Book.cs" />
+    <Compile Include="Entities\Books\BookDetailDto.cs" />
+    <Compile Include="Entities\Books\BookDto.cs" />
+    <Compile Include="Entities\Music\Album.cs" />
+    <Compile Include="Entities\Music\AlbumTrack.cs" />
+    <Compile Include="Entities\Music\Artist.cs" />
+    <Compile Include="Entities\Music\Genre.cs" />
+    <Compile Include="Entities\Music\Playlist.cs" />
+    <Compile Include="Entities\Music\PlaylistTrack.cs" />
+    <Compile Include="Entities\Music\Song.cs" />
+    <Compile Include="Mappings\NH\PlaylistTrackMap.cs" />
+    <Compile Include="Mappings\NH\PlaylistMap.cs" />
+    <Compile Include="Mappings\NH\AlbumTrackMap.cs" />
+    <Compile Include="Mappings\NH\AlbumMap.cs" />
+    <Compile Include="Mappings\NH\SongMap.cs" />
+    <Compile Include="Mappings\NH\GenreMap.cs" />
+    <Compile Include="Mappings\NH\ArtistMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="NH\HopefullyWeWillNeverNeedThisFolder.txt" />
+    <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -7,8 +7,8 @@ using System.Web.Mvc;
 using NUnit.Framework;
 using Tracky.Controllers.Mvc;
 using Tracky.DependencyResolution;
-using Tracky.Domain.EF.DataContexts;
-using Tracky.Domain.EF.Music;
+using Tracky.Domain.Entities.Music;
+using Tracky.Domain.Repositories.Orm.EF.DataContexts;
 
 namespace Tracky.Tests.Integration.Controllers.Mvc
 {
@@ -21,12 +21,12 @@ namespace Tracky.Tests.Integration.Controllers.Mvc
         [SetUp]
         public void SetUp()
         {
-            Database.SetInitializer(new DatabaseInitializer());             // Set initializer for a fresh in-memory database for each test run
+            Database.SetInitializer(new EFDatabaseInitializer());           // Set initializer for a fresh in-memory database for each test run
             var context = new LibraryContext();                             // Create data context
             context.Database.Initialize(true);                              // Initialize database on context
 
             var container = IoC.Initialize();                               // Initialize the IoC container
-            _controller = container.GetInstance<GenresController>();       // Ask container for a controller, built with all dependencies
+            _controller = container.GetInstance<GenresController>();        // Ask container for a controller, built with all dependencies
         }
 
         [Test]

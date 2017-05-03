@@ -5,8 +5,8 @@ using System.Web.Mvc;
 using Moq;
 using NUnit.Framework;
 using Tracky.Controllers.Mvc;
-using Tracky.Domain.EF.DataContexts;
-using Tracky.Domain.EF.Music;
+using Tracky.Domain.Entities.Music;
+using Tracky.Domain.Repositories.Orm.EF.DataContexts;
 
 namespace Tracky.Tests.Unit.Controllers.Mvc
 {

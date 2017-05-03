@@ -1,7 +1,6 @@
 ﻿using System;
-using Tracky.Domain.EF.Music;
-using Tracky.Orm;
-using Tracky.Orm.NH;
+using Tracky.Domain.Entities.Music;
+using Tracky.Domain.Repositories.Orm.NH.FromNHSite.FromNHSite;
 
 namespace Tracky
 {
@@ -16,14 +15,10 @@ namespace Tracky
              * This code is only here to demonstrate that NHibernate has been successfully implemented
              * into this project, and that it can persist to a database that was created via
              * Enitity Framework and its code-first approach. It should be removed once solid
-             * Repository and Unit of Work patterns can be implemented, so that Repositories are
-             * available to perform CRUD for all domain objects, with integration tests proving
-             * their behavior. These integration tests MUST be sure to make changes in-memory while
-             * tests are run, and to discard changes after the tests finish, in the same way our
-             * Entity Framework integration tests do.
+             * Repository and Unit of Work patterns have been implemented, with tests.
              */
 
-            var session = NHibernateHelper.GetCurrentSession();
+            var session = NHibernateHelperThatYouShouldNotBeUsing.GetCurrentSession();
             var transaction = session.BeginTransaction();
 
             var newArtist = new Artist { Name = "Rock Musician " + new Random().Next(0, 90000000) };
@@ -31,7 +26,7 @@ namespace Tracky
             session.Save(newArtist);
             transaction.Commit();
 
-            NHibernateHelper.CloseSession();
+            NHibernateHelperThatYouShouldNotBeUsing.CloseSession();
         }
     }
 }

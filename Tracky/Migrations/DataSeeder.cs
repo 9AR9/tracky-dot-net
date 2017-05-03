@@ -1,7 +1,7 @@
 using System.Data.Entity.Migrations;
-using Tracky.Domain.EF.Books;
-using Tracky.Domain.EF.DataContexts;
-using Tracky.Domain.EF.Music;
+using Tracky.Domain.Entities.Books;
+using Tracky.Domain.Entities.Music;
+using Tracky.Domain.Repositories.Orm.EF.DataContexts;
 
 namespace Tracky.Migrations
 {

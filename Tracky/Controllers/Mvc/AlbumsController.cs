@@ -1,10 +1,13 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using Tracky.Domain.EF.DataContexts;
-using Tracky.Domain.EF.Music;
+using Tracky.Domain.Entities.Music;
+using Tracky.Domain.Repositories.NH;
+using Tracky.Domain.Repositories.Orm.EF.DataContexts;
+using Tracky.Domain.Repositories.Orm.NH.Tracky;
 
 namespace Tracky.Controllers.Mvc
 {
@@ -22,6 +25,24 @@ namespace Tracky.Controllers.Mvc
         {
             var albums = _db.Albums.OrderBy(a => a.Title).Include(a => a.Artist).Include(a => a.Genre);
             return View(await albums.ToListAsync());
+
+            //// The below block uses NHibernate to get the Albums.
+            //// ----------
+            //// This represents the interaction flow to be used by services
+            //// that need to interact with the database. The Unit of Work
+            //// object gets wrapped in a using statement, which ensure its
+            //// Dispose method will be called when finished, guaranteeing
+            //// the session that it uses will be closed and disposed of.
+            //// ----------
+            //var uow = new UnitOfWork(false);
+            //using (uow)
+            //{
+            //    uow.BeginTransaction();
+            //    var repo = new AlbumRepository(new UnitOfWork(false));
+            //    IList<Album> albums = repo.GetAll().OrderBy(a => a.Title).ToList();
+            //    uow.FinishTransaction(true);
+            //    return View(albums);
+            //}
         }
 
         // GET: Albums/Details/5

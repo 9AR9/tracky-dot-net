@@ -131,9 +131,6 @@
     <Compile Include="Controllers\Mvc\AlbumsControllerTests.cs" />
     <Compile Include="Controllers\Mvc\SongsControllerTests.cs" />
     <Compile Include="Controllers\Mvc\PlaylistsControllerTests.cs" />
-    <Compile Include="Orm\NH\GabrielSchenker\UnitOfWorkFactoryTests.cs" />
-    <Compile Include="Orm\NH\GabrielSchenker\UnitOfWorkImplementorTests.cs" />
-    <Compile Include="Orm\NH\GabrielSchenker\UnitOfWorkManagerTests.cs" />
     <Compile Include="TestDbAsyncQueryProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

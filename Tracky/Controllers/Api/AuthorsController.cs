@@ -5,8 +5,8 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using Tracky.Domain.EF.Books;
-using Tracky.Domain.EF.DataContexts;
+using Tracky.Domain.Entities.Books;
+using Tracky.Domain.Repositories.Orm.EF.DataContexts;
 using Tracky.Domain.Services.EF.Books;
 
 namespace Tracky.Controllers.Api

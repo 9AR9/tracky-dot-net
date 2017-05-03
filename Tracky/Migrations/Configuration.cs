@@ -1,5 +1,5 @@
 using System.Data.Entity.Migrations;
-using Tracky.Domain.EF.DataContexts;
+using Tracky.Domain.Repositories.Orm.EF.DataContexts;
 
 namespace Tracky.Migrations
 {
