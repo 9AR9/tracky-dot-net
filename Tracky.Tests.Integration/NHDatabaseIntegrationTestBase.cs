@@ -3,7 +3,7 @@ using Tracky.Domain.Repositories.Orm.NH.Tracky;
 
 namespace Tracky.Tests.Integration
 {
-    public abstract class NHDatabaseIntegrationTestBase
+    public abstract class NhDatabaseIntegrationTestBase
     {
         public UnitOfWork UnitOfWork;
 

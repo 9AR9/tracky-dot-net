@@ -1,13 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
-                   assembly="Tracky.Domain"
-                   namespace="Tracky.Domain.EF.Music">
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Tracky.Domain" namespace="Tracky.Domain.EF.Music">
 
   <class name="Artist" table="Artists">
     <id name="Id">
-      <generator class="identity"/> <!-- should this be class="native"? -->
+      <generator class="identity"/>
     </id>
     <property name="Name"></property>
   </class>
   
 </hibernate-mapping>
+
+<!--
+NOTE:
+This NHibernate XML mapping file remains in the main project's Mappings folder only as 
+an historical example of NHibernate's original mapping strategy. This approach has
+been deprecated in my usage in favor of the FluentNHibernate library, which allows
+the mapping to be done in code that acts directly upon the domain entities.
+-->

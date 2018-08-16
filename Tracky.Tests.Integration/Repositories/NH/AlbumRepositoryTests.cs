@@ -11,7 +11,7 @@ using Tracky.Domain.Repositories.NH;
 namespace Tracky.Tests.Integration.Repositories.NH
 {
     [TestFixture]
-    class AlbumRepositoryTests : NHDatabaseIntegrationTestBase
+    class AlbumRepositoryTests : NhDatabaseIntegrationTestBase
     {
         private IAlbumRepository _repository;
         private ISongRepository _songRepository;

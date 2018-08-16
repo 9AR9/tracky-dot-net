@@ -2,7 +2,7 @@
 using NHibernate;
 using NHibernate.Cfg;
 
-namespace Tracky.Domain.Repositories.Orm.NH.FromNHSite.FromNHSite
+namespace Tracky.Domain.Repositories.Orm.NH.FromNHSite
 {
     /*
      * This NHibernateHelper class mostly looks like the one found on the NHibernate.info

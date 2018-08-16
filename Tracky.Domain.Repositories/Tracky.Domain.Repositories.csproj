@@ -78,7 +78,7 @@
     <Compile Include="NH\ISongRepository.cs" />
     <Compile Include="NH\IGenreRepository.cs" />
     <Compile Include="NH\IArtistRepository.cs" />
-    <Compile Include="Orm\NH\FromNHSite\FromNHSite\NHibernateHelperThatYouShouldNotBeUsing.cs" />
+    <Compile Include="Orm\NH\FromNHSite\NHibernateHelperThatYouShouldNotBeUsing.cs" />
     <Compile Include="Orm\NH\Tracky\NHibernateHelper.cs" />
     <Compile Include="Orm\NH\Tracky\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

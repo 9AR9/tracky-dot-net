@@ -156,7 +156,6 @@
     <Content Include="Global.asax" />
     <Content Include="apps\playWithProducts.html" />
     <Content Include="index.html" />
-    <EmbeddedResource Include="Mappings\Author.hbm.xml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -204,7 +203,7 @@
     <Compile Include="Controllers\Mvc\PlaylistsController.cs" />
     <Compile Include="Controllers\Mvc\PlaylistTracksController.cs" />
     <Compile Include="Controllers\Mvc\SongsController.cs" />
-    <Compile Include="DependencyResolution\DefaultRegistry.cs" />
+    <Compile Include="DependencyResolution\DependencyInjectionRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
     <Compile Include="DependencyResolution\StructureMapScopeModule.cs" />

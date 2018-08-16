@@ -26,14 +26,20 @@ namespace Tracky.Controllers.Mvc
             var albums = _db.Albums.OrderBy(a => a.Title).Include(a => a.Artist).Include(a => a.Genre);
             return View(await albums.ToListAsync());
 
-            //// The below block uses NHibernate to get the Albums.
-            //// ----------
-            //// This represents the interaction flow to be used by services
-            //// that need to interact with the database. The Unit of Work
-            //// object gets wrapped in a using statement, which ensure its
-            //// Dispose method will be called when finished, guaranteeing
-            //// the session that it uses will be closed and disposed of.
-            //// ----------
+            /*
+             * TEST-ONLY BLOCK BELOW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+             * The following block uses NHibernate to get the Albums.
+             *
+             * This represents the interaction flow to be used by services
+             * that need to interact with the database. The Unit of Work
+             * object gets wrapped in a using statement, which ensure its
+             * Dispose method will be called when finished, guaranteeing
+             * the session that it uses will be closed and disposed of.
+             *
+             * This simple approach should NOT be used in live production code,
+             * but can be used in testing to observe the basic NHibernate
+             * database interaction process.
+             */
             //var uow = new UnitOfWork(false);
             //using (uow)
             //{

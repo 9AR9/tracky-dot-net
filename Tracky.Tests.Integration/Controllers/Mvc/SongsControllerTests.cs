@@ -21,7 +21,7 @@ namespace Tracky.Tests.Integration.Controllers.Mvc
         [SetUp]
         public void SetUp()
         {
-            Database.SetInitializer(new EFDatabaseInitializer());            // Set initializer for a fresh in-memory database for each test run
+            Database.SetInitializer(new EfDatabaseInitializer());           // Set initializer for a fresh in-memory database for each test run
             var context = new LibraryContext();                             // Create data context
             context.Database.Initialize(true);                              // Initialize database on context
 

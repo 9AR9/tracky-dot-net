@@ -21,10 +21,10 @@ namespace Tracky.DependencyResolution {
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
 	
-    public class DefaultRegistry : Registry {
+    public class DependencyInjectionRegistry : Registry {
         #region Constructors and Destructors
 
-        public DefaultRegistry() {
+        public DependencyInjectionRegistry() {
             Scan(
                 scan => {
                     scan.TheCallingAssembly();
